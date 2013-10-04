@@ -1,1 +1,1 @@
-Welcome to the jemalloc wiki!
+[Frequently Asked Questions](Frequently-Asked-Questions)
