@@ -1,0 +1,5 @@
+* **Why does my application crash in tcache_dalloc_small() when I deallocate?**
+
+  This is usually due to the application having freed the same allocation twice -- a "double free".  There are many ways in which memory can be corrupted after a double free, but in practice it is quite common in jemalloc for the region allocation count for allocation's containing page run to prematurely reach 0, and for the entire page run to be freed for reuse.  Later on, when the application frees the remaining allocation that was  part of the prematurely freed page run, it is quite common for jemalloc to crash while attempting to dereference a metadata pointer that was embedded in the page run's header.
+
+  If you see a crash in tcache_dalloc_small() and suspect your application is crashing due to a double free, you can force immediate failure due to double freeing by using a debug build of jemalloc with thread caching disabled.
