@@ -1,1 +1,1 @@
-[Frequently Asked Questions](Frequently-Asked-Questions)
+[Frequently Asked Questions](wiki/Frequently-Asked-Questions)
