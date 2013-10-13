@@ -1,16 +1,17 @@
 All of the following examples assume a standard developer environment on Unix-like machine, and something like the following variables in the environment:
-:<tt>export JEMALLOC_PATH=$HOME/local</tt>
-:<tt>export UNWIND_PATH=$HOME/local</tt>
+
+    export JEMALLOC_PATH=$HOME/local
+    export UNWIND_PATH=$HOME/local
 
 There are several ways to integrate jemalloc into an application. Here are some examples, from simplest to most involved:
 
 * Use the LD_PRELOAD environment variable to inject jemalloc into the application at run time. Note that this will only work if your application does _not_ statically link a malloc implementation.
 
-    LD_PRELOAD=${JEMALLOC_PATH}/lib/libjemalloc.so.1 app
+        LD_PRELOAD=${JEMALLOC_PATH}/lib/libjemalloc.so.1 app
 
 * Link jemalloc into the application at build time, but use it as a generic malloc implementation:
 
-    cc app.c -o app -L${JEMALLOC_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
+        cc app.c -o app -L${JEMALLOC_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
 
 * Compile jemalloc with an API prefix (see the `--with-jemalloc-prefix` configure option), link with jemalloc at build time as above, but use jemalloc distinctly from the system allocator.
 
