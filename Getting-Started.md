@@ -28,7 +28,7 @@ Once you have jemalloc integrated into your application, you can use special fea
             -L${UNWIND_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -Wl,-rpath,${UNWIND_PATH}/lib \
             -ljemalloc -lunwind
 
-  - ex_stats.c:
+  - ex_stats_print.c:
 
             #include <stdlib.h>
             #include <jemalloc/jemalloc.h>
