@@ -1,5 +1,5 @@
 * Background
-  - [History](https://github.com/jemalloc/jemalloc/wiki/History)
+  - [[History]]
   - [Adoption](https://github.com/jemalloc/jemalloc/wiki/Adoption)
 * [Getting Started](https://github.com/jemalloc/jemalloc/wiki/Getting-Started)
 * Use Cases
