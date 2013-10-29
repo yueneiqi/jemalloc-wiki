@@ -1,7 +1,6 @@
 All of the following examples assume a standard developer environment on Unix-like machine, and something like the following variables in the environment:
 
     export JEMALLOC_PATH=$HOME/local
-    export UNWIND_PATH=$HOME/local
 
 There are several ways to integrate jemalloc into an application. Here are some examples, from simplest to most involved:
 
@@ -25,8 +24,7 @@ Once you have jemalloc integrated into your application, you can use special fea
   - Compile the following code as such:
 
             gcc ex_stats_print.c -o ex_stats_print -I${JEMALLOC_PATH}/include -L${JEMALLOC_PATH}/lib \
-            -L${UNWIND_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -Wl,-rpath,${UNWIND_PATH}/lib \
-            -ljemalloc -lunwind
+            -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
 
   - ex_stats_print.c:
 
