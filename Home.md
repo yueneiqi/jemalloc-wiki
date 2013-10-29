@@ -4,7 +4,7 @@
 * [[Getting Started|Getting-Started]]
 * Use Cases
   - [[Find a Memory Corruption Bug|Use-Case:-Find-a-memory-corruption-bug]]
-  - [Basic Allocator Statistics](https://github.com/jemalloc/jemalloc/wiki/Use-Case:-Basic-Allocator-Statistics)
-  - [Introspection via `mallctl`](https://github.com/jemalloc/jemalloc/wiki/Use-Case:-Introspection-Via-mallctl)
-  - [Leak Checking](https://github.com/jemalloc/jemalloc/wiki/Use-Case:-Leak-Checking)
-  - [Heap Profiling](https://github.com/jemalloc/jemalloc/wiki/Use-Case:-Heap-Profiling)
+  - [[Basic Allocator Statistics|Use-Case:-Basic-Allocator-Statistics]]
+  - [[Introspection via `mallctl`|Use-Case:-Introspection-Via-mallctl]]
+  - [[Leak Checking|Use-Case:-Leak-Checking]]
+  - [[Heap Profiling|Use-Case:-Heap-Profiling]]
