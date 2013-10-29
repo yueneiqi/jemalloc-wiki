@@ -4,20 +4,28 @@ In addition to [leak checking at exit](https://github.com/jemalloc/jemalloc/wiki
 * Manually, via the "prof.dump" mallctl.  Use function calls something like the following (with proper error checking, of course).
   - Dump to specified filename.  Set `prof` to `true` in your [`MALLOC_CONF`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#tuning):
 
-            export MALLOC_CONF="prof:true,prof_prefix:jeprof.out"
+    ```sh
+    export MALLOC_CONF="prof:true,prof_prefix:jeprof.out"
+    ```
 
     Then execute code similar to the following:
 
-            const char *fileName = "heap_info.out";
-            mallctl("prof.dump", NULL, NULL, &fileName, sizeof(const char *));
+    ```c
+    const char *fileName = "heap_info.out";
+    mallctl("prof.dump", NULL, NULL, &fileName, sizeof(const char *));
+    ```
 
   - Use automatic filename generation.  Set `prof_prefix` in your [`MALLOC_CONF`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#tuning) in addition to `prof`:
 
-            export MALLOC_CONF="prof:true,prof_prefix:jeprof.out"
+    ```sh
+    export MALLOC_CONF="prof:true,prof_prefix:jeprof.out"
+    ```
 
     Then execute code similar to the following:
 
-            mallctl("prof.dump", NULL, NULL, NULL, 0);
+    ```c
+    mallctl("prof.dump", NULL, NULL, NULL, 0);
+    ```
 
 `pprof` can compare any two of the resulting series of profile dumps, and show what allocation activity occurred during the intervening time.  Use the `--base=<base>` flag to specify the first profile.
 
