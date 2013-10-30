@@ -32,8 +32,8 @@ Once you have jemalloc integrated into your application, you can use special fea
   - Compile the following code as such:
 
     ```sh
-    gcc ex_stats_print.c -o ex_stats_print -I${JEMALLOC_PATH}/include -L${JEMALLOC_PATH}/lib \
-    -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
+    gcc ex_stats_print.c -o ex_stats_print -I${JEMALLOC_PATH}/include \
+    -L${JEMALLOC_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
     ```
 
   - ex_stats_print.c:
