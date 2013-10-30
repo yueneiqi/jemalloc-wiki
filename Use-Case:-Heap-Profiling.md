@@ -8,7 +8,7 @@ In addition to [leak checking at exit](https://github.com/jemalloc/jemalloc/wiki
     export MALLOC_CONF="prof:true,prof_prefix:jeprof.out"
     ```
 
-    Then execute code similar to the following:
+    Then execute code similar to the following C code:
 
     ```c
     const char *fileName = "heap_info.out";
@@ -21,7 +21,7 @@ In addition to [leak checking at exit](https://github.com/jemalloc/jemalloc/wiki
     export MALLOC_CONF="prof:true,prof_prefix:jeprof.out"
     ```
 
-    Then execute code similar to the following:
+    Then execute code similar to the following C code:
 
     ```c
     mallctl("prof.dump", NULL, NULL, NULL, 0);
