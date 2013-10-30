@@ -1,7 +1,7 @@
 In addition to [leak checking at exit](https://github.com/jemalloc/jemalloc/wiki/Use-Case:-Leak-Checking), jemalloc can be told dump a profile:
 * Approximately every so many bytes of allocation.  See the [`prof_leak`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#opt.prof_leak) and [`lg_prof_interval`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#opt.lg_prof_interval) [`MALLOC_CONF`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#tuning) options.
 * Every time the total virtual memory in use reaches a new high.  See the [`prof_gdump`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#opt.prof_gdump) [`MALLOC_CONF`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#tuning) option.
-* Manually, via the "prof.dump" mallctl.  Use function calls something like the following (with proper error checking, of course).
+* Manually, via the ["prof.dump"](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#prof.dump) mallctl.  Use function calls something like the following (with proper error checking, of course).
   - Dump to specified filename.  Set `prof` to `true` in your [`MALLOC_CONF`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#tuning):
 
     ```sh
