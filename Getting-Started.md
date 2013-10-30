@@ -1,4 +1,4 @@
-All of the following examples assume a standard developer environment on Unix-like machine, and something like the following variables in the environment:
+All of the following examples assume a standard developer environment on Unix-like machine, and something like the following shell environment variable configuration:
 
 ```sh
 export JEMALLOC_PATH=$HOME/local
