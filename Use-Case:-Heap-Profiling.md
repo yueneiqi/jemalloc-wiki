@@ -29,7 +29,7 @@ In addition to [leak checking at exit](https://github.com/jemalloc/jemalloc/wiki
 
 `pprof` can compare any two of the resulting series of profile dumps, and show what allocation activity occurred during the intervening time.  Use the `--base=<base>` flag to specify the first profile.
 
-It is possible to start an application with profiling enabled but inactive, by specifying `MALLOC_CONF=prof_active:false`.  This is only useful if the application manually activates/deactivates profiling via the "prof.active" mallctl during execution.  Use cases include:
+It is possible to start an application with profiling enabled but inactive, by specifying `MALLOC_CONF=prof_active:false`.  This is only useful if the application manually activates/deactivates profiling via the ["prof.active" mallctl](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#opt.prof_active) during execution.  Use cases include:
 * Activate profiling after initialization is complete, so that profiles only show objects allocated during steady-state execution.
 * Dump a profile, activate profiling for 30 seconds, wait 30 seconds after deactivating profiling, then dump another profile and use `pprof` to compare the two dumps.  This will focus on objects that were allocated during steady-state execution, but are long-lived.  These objects are prime candidates for explaining memory growth over time.
 
