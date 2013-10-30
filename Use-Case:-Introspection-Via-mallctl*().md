@@ -1,7 +1,8 @@
 Compile the following code as such:
 
 ```sh
-cc ex_mallctl.c -o ex_mallctl -I${JEMALLOC_PATH}/include -L${JEMALLOC_PATH}/lib -Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
+cc ex_mallctl.c -o ex_mallctl -I${JEMALLOC_PATH}/include -L${JEMALLOC_PATH}/lib \
+-Wl,-rpath,${JEMALLOC_PATH}/lib -ljemalloc
 ```
 
 ex_mallctl.c:
