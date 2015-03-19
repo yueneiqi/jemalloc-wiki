@@ -7,3 +7,5 @@ Major uses of jemalloc include:
 * [Redis](http://redis.io/)
 * [hhvm](https://github.com/facebook/hiphop-php)
 * [MariaDB](https://mariadb.org/)
+* [Aerospike](http://www.aerospike.com/)
+* [Android](https://github.com/android/platform_bionic)
