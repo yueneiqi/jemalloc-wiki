@@ -37,31 +37,30 @@ Once you have jemalloc integrated into your application, you can use special fea
     ```
 
   - ex_stats_print.c:
-
     ```c
-#include <stdlib.h>
-#include <jemalloc/jemalloc.h>
+    #include <stdlib.h>
+    #include <jemalloc/jemalloc.h>
 
-void
-do_something(size_t i)
-{
+    void
+    do_something(size_t i)
+    {
 
-        // Leak some memory.
-        malloc(i * 100);
-}
+            // Leak some memory.
+            malloc(i * 100);
+    }
 
-int
-main(int argc, char **argv)
-{
-        size_t i;
+    int
+    main(int argc, char **argv)
+    {
+            size_t i;
 
-        for (i = 0; i < 1000; i++) {
-                do_something(i);
-        }
+            for (i = 0; i < 1000; i++) {
+                    do_something(i);
+            }
 
-        // Dump allocator statistics to stderr.
-        malloc_stats_print(NULL, NULL, NULL);
+            // Dump allocator statistics to stderr.
+            malloc_stats_print(NULL, NULL, NULL);
 
-        return (0);
-}
+            return (0);
+    }
     ```
