@@ -22,8 +22,8 @@ To learn more about the leaks, run:
 jeprof --show_bytes `which w` jeprof.19678.0.f.heap
     Using local file /usr/bin/w.
 Using local file jeprof.19678.0.f.heap.
-Welcome to pprof!  For help, type 'help'.
-(pprof) top
+Welcome to jeprof!  For help, type 'help'.
+(jeprof) top
 Total: 267184 B
   258032  96.6%  96.6%   258032  96.6% _3_2_5
     3616   1.4%  97.9%     3616   1.4% _nl_intern_locale_data
@@ -41,7 +41,7 @@ Total: 267184 B
 To generate a PDF of the call graph for where the leaks occurred, run:
 
 ```sh
-pprof --show_bytes --pdf `which w` jeprof.19678.0.f.heap > w.pdf
+jeprof --show_bytes --pdf `which w` jeprof.19678.0.f.heap > w.pdf
 ```
 
 Here is the result: ![w.pdf](images/w.png)
