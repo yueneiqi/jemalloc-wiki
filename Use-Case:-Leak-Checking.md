@@ -13,7 +13,7 @@ This will result in something like the following output when the program exits:
 
 ```text
 <jemalloc>: Leak summary: 267184 bytes, 473 objects, 20 contexts
-<jemalloc>: Run pprof on "jeprof.19678.0.f.heap" for leak detail
+<jemalloc>: Run jeprof on "jeprof.19678.0.f.heap" for leak detail
 ```
 
 To learn more about the leaks, run:
