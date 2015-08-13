@@ -5,8 +5,8 @@ jemalloc's heap profile output files are a functional superset of those created 
 Let's start off with the simple case, where it is possible to shut the application down and see what memory was still allocated at exit.  The offending application we will look at is `w`:
 
 ```sh
-MALLOC_CONF=prof_leak:true,lg_prof_sample:0 \
-LD_PRELOAD=${JEMALLOC_PATH}/lib/libjemalloc.so.1 w
+MALLOC_CONF=prof_leak:true,lg_prof_sample:0,prof_final:true \
+LD_PRELOAD=${JEMALLOC_PATH}/lib/libjemalloc.so.2 w
 ```
 
 This will result in something like the following output when the program exits:
