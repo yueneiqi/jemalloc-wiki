@@ -1,6 +1,6 @@
 How does one go about finding a memory leak in a production application?  For that matter, what if there is no leak, but the application is exhausting memory for non-apparent reasons?  Heap profiling can help.
 
-jemalloc's heap profile output files are compatible with those created by [gperftools](https://code.google.com/p/gperftools/), so the [gperftools heap profiler documentation](http://gperftools.googlecode.com/svn/trunk/doc/heapprofile.html) is relevant reading.  You will need the `pprof` Perl script that is part of the [gperftools](https://code.google.com/p/gperftools/) distribution.  Use the `pprof` that is included with jemalloc.
+jemalloc's heap profile output files are a functional superset of those created by [gperftools](https://code.google.com/p/gperftools/), so the [gperftools heap profiler documentation](http://gperftools.googlecode.com/svn/trunk/doc/heapprofile.html) is relevant reading.  You will need to use the `jeprof` Perl script that comes with jemalloc rather than the `pprof` Perl script that is part of the [gperftools](https://code.google.com/p/gperftools/) distribution, because jemalloc outputs per thread heap profile data, whereas gperftools only outputs global heap profile data.
 
 Let's start off with the simple case, where it is possible to shut the application down and see what memory was still allocated at exit.  The offending application we will look at is `w`:
 
@@ -19,7 +19,7 @@ This will result in something like the following output when the program exits:
 To learn more about the leaks, run:
 
 ```text
-pprof --show_bytes `which w` jeprof.19678.0.f.heap
+jeprof --show_bytes `which w` jeprof.19678.0.f.heap
     Using local file /usr/bin/w.
 Using local file jeprof.19678.0.f.heap.
 Welcome to pprof!  For help, type 'help'.
