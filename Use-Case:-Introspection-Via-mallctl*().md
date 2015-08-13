@@ -37,14 +37,16 @@ main(int argc, char **argv)
                 // Get basic allocation statistics.  Take care to check for
                 // errors, since --enable-stats must have been specified at
                 // build time for these statistics to be available.
-                size_t sz, allocated, active, mapped;
+                size_t sz, allocated, active, metadata, resident, mapped;
                 sz = sizeof(size_t);
                 if (mallctl("stats.allocated", &allocated, &sz, NULL, 0) == 0
                     && mallctl("stats.active", &active, &sz, NULL, 0) == 0
+                    && mallctl("stats.metadata", &metadata, &sz, NULL, 0) == 0
+                    && mallctl("stats.resident", &resident, &sz, NULL, 0) == 0
                     && mallctl("stats.mapped", &mapped, &sz, NULL, 0) == 0) {
                         fprintf(stderr,
-                            "Current allocated/active/mapped: %zu/%zu/%zu\n",
-                            allocated, active, mapped);
+                            "Current allocated/active/metadata/resident/mapped: %zu/%zu/%zu/%zu/%zu\n",
+                            allocated, active, metadata, resident, mapped);
                 }
         }
 
@@ -55,13 +57,13 @@ main(int argc, char **argv)
 The output of the program will look like:
 
 ```text
-Current allocated/active/mapped: 33568/36864/12582912
-Current allocated/active/mapped: 41632/45056/12582912
-Current allocated/active/mapped: 57760/61440/12582912
+Current allocated/active/metadata/resident/mapped: 181152/225280/1317632/1363968/4194304
+Current allocated/active/metadata/resident/mapped: 192352/253952/1317632/1392640/4194304
+Current allocated/active/metadata/resident/mapped: 214752/282624/1317632/1421312/4194304
 ...
-Current allocated/active/mapped: 1600928/1622016/12582912
-Current allocated/active/mapped: 1613216/1634304/12582912
-Current allocated/active/mapped: 1625504/1646592/12582912
+Current allocated/active/metadata/resident/mapped: 1081056/1220608/1317632/2359296/4194304
+Current allocated/active/metadata/resident/mapped: 1081056/1220608/1317632/2359296/4194304
+Current allocated/active/metadata/resident/mapped: 1081056/1220608/1317632/2359296/4194304
 ```
 
 The [jemalloc(3)](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html) manual page documents all the mallctl names that are supported by a full-featured jemalloc build.  Additionally, jemalloc itself implements `malloc_stats_print()` in terms of `mallctl*()`, so an example of nearly all mallctl-related use cases can be found in the jemalloc source code itself ([`jemalloc/src/stats.c`](https://github.com/jemalloc/jemalloc/blob/master/src/stats.c)).
