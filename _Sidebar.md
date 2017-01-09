@@ -3,7 +3,7 @@
   - [[History|Background#History]]
   - [[Intended use|Background#Intended use]]
   - [[Adoption|Background](Adoption)]
-  - [[Adoption|Background](#Adoption)]
+  - [Adoption|[Background](#Adoption)]
   - [[Adoption|Background(Adoption)]]
   - [[Adoption|Background(#Adoption)]]
   - [[Additional documentation|Background###Additional documentation]]
