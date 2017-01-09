@@ -1,6 +1,6 @@
 [[Home|]]
 * [[Background|Background]]
-  - [[History]]
+  - [[Background|Background#History]]
   - [[Intended use|Background:-Intended-use]]
   - [[Adoption]]
   - [[Additional documentation|Additional-documentation]]
