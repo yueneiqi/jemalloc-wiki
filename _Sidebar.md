@@ -2,8 +2,8 @@
 * [[Background|Background]]
   - [[History|Background#History]]
   - [[Intended use|Background#Intended use]]
-  - [[Adoption]]
-  - [[Additional documentation|Additional-documentation]]
+  - [[Adoption|Background#Adoption]]
+  - [[Additional documentation|Background#Additional documentation]]
 * [[Getting Started|Getting-Started]]
 * Use Cases
   - [[Find a Memory Corruption Bug|Use-Case:-Find-a-memory-corruption-bug]]
