@@ -1,6 +1,7 @@
 [[Home|]]
-* Background
+* [[Background|Background]]
   - [[History]]
+  - [[Intended use|Background:-Intended-use]]
   - [[Adoption]]
   - [[Additional documentation|Additional-documentation]]
 * [[Getting Started|Getting-Started]]
