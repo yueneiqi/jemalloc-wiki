@@ -1,8 +1,8 @@
 [[Home|]]
 * [[Background|Background]]
-  - [[History|Background###History]]
-  - [[Intended use|Background###Intended use]]
-  - [[Adoption|Background###Adoption]]
+  - [[History|Background#History]]
+  - [[Intended use|Background#Intended use]]
+  - [[Adoption|Background#Adoption]]
   - [[Additional documentation|Background###Additional documentation]]
 * [[Getting Started|Getting-Started]]
 * Use Cases
