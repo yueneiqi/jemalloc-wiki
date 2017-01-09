@@ -1,2 +1,2 @@
-Use the sidebar to navigate the wiki.
+Use the sidebar to navigate the jemalloc wiki.
 
