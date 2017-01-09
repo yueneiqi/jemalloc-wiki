@@ -7,7 +7,7 @@
   - [AdoptionBackground](#Adoption)]
   - [[Adoption|Background(Adoption)]]
   - [[Adoption|Background(#Adoption)]]
-  - [[Additional documentation|Background###Additional documentation]]
+  - [[Additional documentation|Background#additional-documentation]]
 * [[Getting Started|Getting-Started]]
 * Use Cases
   - [[Find a Memory Corruption Bug|Use-Case:-Find-a-memory-corruption-bug]]
