@@ -1,3 +1,4 @@
+[[Home|]]
 * Background
   - [[History]]
   - [[Adoption]]
