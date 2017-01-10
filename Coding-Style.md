@@ -2,7 +2,7 @@ jemalloc's coding style is based on [FreeBSD's style(9)](https://www.freebsd.org
 
 C code conforms to the C99 standard.
 
-Tabs stops are 8 characters apart, starting at column 0 and ending in principle after column 72.  Wrap lines to occupy only columns [0..80) whenever possible, with continuation lines indented an additional 4 columns.  Exceptions are primarily due to single tokens that are too far indented and/or too long to be able to follow this rule.  Try to avoid exceptions by limiting block nesting depth.  Compose whitespace for indentation as a sequence of 0 or more tab characters, followed by fewer than 8 space characters.  Increase block indentation by one tabstop for each major indentation level, with the exception of not indenting switch blocks.
+Tabs stops are 8 characters apart, starting at column 0 and ending in principle after column 72.  Wrap lines to occupy only columns [0..80) whenever possible, with continuation lines indented an additional 4 columns.  Exceptions are primarily due to single tokens that are too far indented and/or too long to be able to follow this rule.  Try to avoid exceptions by limiting block nesting depth.  Compose whitespace for indentation as a sequence of 0 or more tab characters, followed by fewer than 8 space characters.  Increase block indentation by one tabstop for each major indentation level.
 ```C
 void
 foo(int x)
@@ -31,6 +31,33 @@ foo(int x)
         default:
                 not_reached();
         }    
+}
+/*------|-------|-------|-------|-------|-------|-------|-------|-------|-------
+0       8      16      24      32      40      48      56      64      72     */
+```
+
+Align switch labels with the enclosing block.  Similarly, align goto labels to column 0.
+```C
+void
+bar(int x)
+{
+        switch (x) {
+        case 0:
+                if (do_something()) {
+                        goto label_error;
+                }
+                /* Fall through. */
+        case 1:
+                do_more();
+                break;
+        default:
+                not_reached();
+        }
+
+        do_yet_more();
+        return;
+label_error:
+        recover_from_error();
 }
 /*------|-------|-------|-------|-------|-------|-------|-------|-------|-------
 0       8      16      24      32      40      48      56      64      72     */
