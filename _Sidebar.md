@@ -11,7 +11,7 @@
   - [[Introspection via mallctl*()|Use-Case:-Introspection-Via-mallctl*()]]
   - [[Leak Checking|Use-Case:-Leak-Checking]]
   - [[Heap Profiling|Use-Case:-Heap-Profiling]]
-* [[Development|Development]]
+* Development
   - [[Coding style|Coding-Style]]
   - [[Testing|Testing]]
   - [[Code review and integration|Code-review]]
