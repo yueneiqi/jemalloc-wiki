@@ -21,7 +21,7 @@ Major uses of jemalloc include:
 * [Aerospike](http://www.aerospike.com/)
 * [Android](https://github.com/android/platform_bionic)
 
-### Additional documentation
+# Additional documentation
 The following documentation is dated or otherwise unsuited to wiki form:
 * <a href="http://jemalloc.net/jemalloc.3.html">jemalloc(3) manual page</a>: The manual page for the latest release fully describes the API and options supported by jemalloc, and includes a brief summary of its internals.
 * <a href="http://www.facebook.com/notes/facebook-engineering/scalable-memory-allocation-using-jemalloc/480222803919">Facebook Engineering post</a>: This article was written in 2011 and corresponds to jemalloc 2.1.0.
