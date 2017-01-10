@@ -6,7 +6,7 @@ In late 2007, the [Mozilla Project](http://www.mozilla.org/) was hard at work im
 Starting in 2009, Jason Evans adapted jemalloc to handle the extreme loads [Facebook](http://www.facebook.com/) servers commonly operate under, and added numerous features that support development and monitoring. Facebook uses jemalloc in many components that are integral to serving its website. Facebook supports numerous open source projects, and is to thank for sponsoring many jemalloc features.
 
 # Intended use
-XXX
+jemalloc is a general purpose ```malloc(3)``` implementation that emphasizes fragmentation avoidance and scalable concurrency support.  It is intended for use as the system-provided memory allocator, as in FreeBSD's libc library, as well as for linking into C/C++ applications.  jemalloc provides many introspection, memory management, and tuning features beyond the standard allocator functionality.  As an extreme example, arenas can be used as pool allocators; i.e. an arena can be used for general purpose allocation, and then the entire arena destroyed as a single operation.
 
 # Adoption
 Major uses of jemalloc include:
