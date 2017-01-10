@@ -17,7 +17,7 @@ Lines are wrapped to be no more than 80 characters wide, with continuation lines
                                         some_func(with, several, arguments,
                                             that, do, not,
                                             fit_on_a_single_line, and,
-                                            a_symbol_that_cannot_follow_the_rule);                                                 
+                                            a_symbol_that_can_not_follow_the_rule);                                                 
 ```
 
 Tab characters are never immediately preceded by space characters.  Code blocks are tab-indented one level deeper than their enclosing blocks.
