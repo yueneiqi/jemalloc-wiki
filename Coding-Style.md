@@ -68,4 +68,24 @@ Write single-line comments with ```/*...*/``` delimiters, and put the delimiters
 0       8      16      24      32      40      48      56      64      72     */
 ```
 
+Enclose all blocks in braces.  Put opening braces on the same lines as associated control flow, with the exception of putting function-opening braces in column 0.  Put ```else``` on the same line as the preceding closing brace.
+```C
+if (foo) {
+} else if (bar) {
+} else {
+}
+
+switch (foo) {
+case 0:
+        break;
+case 1: {
+        int x = a();
+        do {
+                b();
+        } while (x < c);
+        break;
+} default:
+        not_reached();
+}
+```
 [XXX Much more to come.]
