@@ -19,18 +19,7 @@ foo(int x)
                         }
                         return;
                 }
-        }
-
-        switch (x) {
-        case 0:
-                do_something();
-                /* Fall through. */
-        case 1:
-                do_more();
-                break;
-        default:
-                not_reached();
-        }    
+        }  
 }
 /*------|-------|-------|-------|-------|-------|-------|-------|-------|-------
 0       8      16      24      32      40      48      56      64      72     */
