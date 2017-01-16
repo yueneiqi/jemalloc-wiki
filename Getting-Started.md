@@ -22,7 +22,7 @@ There are several ways to integrate jemalloc into an application. Here are some 
 
 Once you have jemalloc integrated into your application, you can use special features in a variety of ways:
 
-* Set the `/etc/malloc.conf` symlink or [`MALLOC_CONF`](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html#tuning) environment variable to tune jemalloc, e.g.
+* Set the `/etc/malloc.conf` symlink or [`MALLOC_CONF`](http://jemalloc.net/jemalloc.3.html#tuning) environment variable to tune jemalloc, e.g.
 
   ```sh
   export MALLOC_CONF="prof:true,lg_prof_sample:1,prof_accum:false,prof_prefix:jeprof.out"
