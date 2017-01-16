@@ -66,4 +66,4 @@ Current allocated/active/metadata/resident/mapped: 1081056/1220608/1317632/23592
 Current allocated/active/metadata/resident/mapped: 1081056/1220608/1317632/2359296/4194304
 ```
 
-The [jemalloc(3)](http://www.canonware.com/download/jemalloc/jemalloc-latest/doc/jemalloc.html) manual page documents all the mallctl names that are supported by a full-featured jemalloc build.  Additionally, jemalloc itself implements `malloc_stats_print()` in terms of `mallctl*()`, so an example of nearly all mallctl-related use cases can be found in the jemalloc source code itself ([`jemalloc/src/stats.c`](https://github.com/jemalloc/jemalloc/blob/master/src/stats.c)).
+The [jemalloc(3)](http://jemalloc.net/jemalloc.3.html) manual page documents all the mallctl names that are supported by a full-featured jemalloc build.  Additionally, jemalloc itself implements `malloc_stats_print()` in terms of `mallctl*()`, so an example of nearly all mallctl-related use cases can be found in the jemalloc source code itself ([`jemalloc/src/stats.c`](https://github.com/jemalloc/jemalloc/blob/master/src/stats.c)).
