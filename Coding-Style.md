@@ -1,4 +1,4 @@
-jemalloc's coding style is based on [FreeBSD's style(9)](https://www.freebsd.org/cgi/man.cgi?query=style&sektion=9), but with enough deviations to warrant stand-alone documentation.  The following applies to C/C++ files; for other languages such as POSIX shell, make a best effort to mimic existing jemalloc code.
+jemalloc's coding style was originally based on [FreeBSD's style(9)](https://www.freebsd.org/cgi/man.cgi?query=style&sektion=9), but has morphed and deviated enough warrant stand-alone documentation.  The following applies to C/C++ files; for other languages such as POSIX shell, make a best effort to mimic existing jemalloc code.
 
 C code conforms to the C99 standard.
 
