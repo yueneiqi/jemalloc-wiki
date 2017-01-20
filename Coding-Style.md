@@ -5,7 +5,7 @@ C code conforms to the C99 standard.
 Tabs stops are 8 characters apart, starting at column 0 and ending in principle after column 72.  Wrap lines to occupy only columns [0..80) whenever possible, with continuation lines indented an additional 4 columns.  Exceptions are primarily due to single tokens that are too far indented and/or too long to be able to follow this rule.  Try to avoid exceptions by limiting block nesting depth.  Compose whitespace for indentation as a sequence of 0 or more tab characters, followed by fewer than 8 space characters.  Increase block indentation by one tabstop for each major indentation level.
 ```C
 void
-foo(int x, some_type_t some_var_a,  some_type_t some_var_b,
+foo(int x, some_type_t some_var_a, some_type_t some_var_b,
     some_type_t some_var_c) {
         for (int i = 0; i < x; i++) {
                 if (bar(i)) {
