@@ -6,8 +6,7 @@ Tabs stops are 8 characters apart, starting at column 0 and ending in principle 
 ```C
 void
 foo(int x, some_type_t some_var_a,  some_type_t some_var_b,
-    some_type_t some_var_c)
-{
+    some_type_t some_var_c) {
         for (int i = 0; i < x; i++) {
                 if (bar(i)) {
                         while (biz(i)) {
@@ -68,24 +67,27 @@ Write single-line comments with ```/*...*/``` delimiters, and put the delimiters
 0       8      16      24      32      40      48      56      64      72     */
 ```
 
-Enclose all blocks in braces.  Put opening braces on the same lines as associated control flow, with the exception of putting function-opening braces in column 0.  Put ```else``` on the same line as the preceding closing brace.
+Enclose all blocks in braces.  Put opening braces on the same lines as associated control flow.  Put ```else``` on the same line as the preceding closing brace.
 ```C
-if (foo) {
-} else if (bar) {
-} else {
-}
+void
+f(void) {
+        if (foo) {
+        } else if (bar) {
+        } else {
+        }
 
-switch (foo) {
-case 0:
-        break;
-case 1: {
-        int x = a();
-        do {
-                b();
-        } while (x < c);
-        break;
-} default:
-        not_reached();
+        switch (foo) {
+        case 0:
+                break;
+        case 1: {
+                int x = a();
+                do {
+                        b();
+                } while (x < c);
+                break;
+        } default:
+                not_reached();
+        }
 }
 ```
 [XXX Much more to come.]
