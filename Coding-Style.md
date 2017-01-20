@@ -28,8 +28,7 @@ foo(int x, some_type_t some_var_a,  some_type_t some_var_b,
 Align switch labels with the enclosing block.  Similarly, align goto labels to column 0.
 ```C
 void
-bar(int x)
-{
+bar(int x) {
         switch (x) {
         case 0:
                 if (do_something()) {
