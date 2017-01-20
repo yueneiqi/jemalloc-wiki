@@ -1,6 +1,6 @@
-jemalloc's coding style was originally based on [FreeBSD's style(9)](https://www.freebsd.org/cgi/man.cgi?query=style&sektion=9), but has morphed and deviated enough warrant stand-alone documentation.  The following applies to C/C++ files; for other languages such as POSIX shell, make a best effort to mimic existing jemalloc code.
+jemalloc's coding style was originally based on [FreeBSD's style(9)](https://www.freebsd.org/cgi/man.cgi?query=style&sektion=9), but has morphed and deviated enough warrant stand-alone documentation.  The following applies to C/C++ files.  For unspecified C/C++ style nuances and for other languages such as POSIX shell, make a best effort to mimic existing jemalloc code.
 
-C code conforms to the C99 standard.
+C code conforms to the C99 standard, with the caveat that Microsoft Visual C++ lacks some features, e.g. ```restrict``` and variable-size arrays, thus requiring workarounds and/or feature avoidance.
 
 Tabs stops are 8 characters apart, starting at column 0 and ending in principle after column 72.  Wrap lines to occupy only columns [0..80) whenever possible, with continuation lines indented an additional 4 columns.  Exceptions are primarily due to single tokens that are too far indented and/or too long to be able to follow this rule.  Try to avoid exceptions by limiting block nesting depth.  Compose whitespace for indentation as a sequence of 0 or more tab characters, followed by fewer than 8 space characters.  Increase block indentation by one tabstop for each major indentation level.
 ```C
@@ -89,4 +89,3 @@ biz(void) {
         }
 }
 ```
-[XXX Much more to come.]
