@@ -69,7 +69,7 @@ Write single-line comments with ```/*...*/``` delimiters, and put the delimiters
 Enclose all blocks in braces.  Put opening braces on the same lines as associated control flow.  Put ```else``` on the same line as the preceding closing brace.
 ```C
 void
-f(void) {
+biz(void) {
         if (foo) {
         } else if (bar) {
         } else {
