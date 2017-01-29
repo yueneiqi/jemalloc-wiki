@@ -89,3 +89,32 @@ biz(void) {
         }
 }
 ```
+
+Prefer simple line-internal whitespace formatting.  Judiciously/sparingly utilize tabstop-based alignment to improve readability.  When in doubt, mimic nearby formatting.
+```C
+struct foo_s {
+        int     x; /* Optionally align structure variables. */
+        char    c;
+        void    *p; /* Comment alignment would serve little purpose here. */
+};
+typedef enum {
+        /* Numerical alignment usually improves readability. */
+        some_enum_foo   =  0,
+        some_enum_bar   =  1,
+        some_enum_biz   = 42
+} some_enum_t;
+/*------|-------|-------|-------|-------|-------|-------|-------|-------|-------
+0       8      16      24      32      40      48      56      64      72     */
+```
+
+The codebase is currently in a gradual transition to replace tabs with spaces in function prototypes.  Write new function prototypes with spaces rather than tabs, and update the whitespace formatting when modifying a prototype's signature.  However, hold off on formatting-only changes until a significant proportion of the adjacent prototypes use use the modern formatting.
+```C
+/* Legacy prototype formatting. */
+int     foo(void);
+void    *bar(void);
+/* Modern prototype formatting. */
+int biz(void);
+void *baz(void);
+/*------|-------|-------|-------|-------|-------|-------|-------|-------|-------
+0       8      16      24      32      40      48      56      64      72     */
+```
