@@ -112,9 +112,11 @@ The codebase is in a gradual transition to replace tabs with spaces in function 
 /* Legacy prototype formatting. */
 int     foo(void);
 void    *bar(void);
+some_type_t     biz(void);
 /* Modern prototype formatting. */
-int biz(void);
-void *baz(void);
+int baz(void);
+void *wiz(void);
+some_type_t waz(void);
 /*------|-------|-------|-------|-------|-------|-------|-------|-------|-------
 0       8      16      24      32      40      48      56      64      72     */
 ```
