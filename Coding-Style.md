@@ -107,7 +107,7 @@ typedef enum {
 0       8      16      24      32      40      48      56      64      72     */
 ```
 
-The codebase is currently in a gradual transition to replace tabs with spaces in function prototypes.  Write new function prototypes with spaces rather than tabs, and update the whitespace formatting when modifying a prototype's signature.  However, hold off on formatting-only changes until a significant proportion of the adjacent prototypes use use the modern formatting.
+The codebase is in a gradual transition to replace tabs with spaces in function prototypes.  Write new function prototypes with spaces rather than tabs, and update the whitespace formatting when modifying a prototype's signature.  However, hold off on formatting-only changes until a significant proportion of the adjacent prototypes use use the modern formatting.
 ```C
 /* Legacy prototype formatting. */
 int     foo(void);
