@@ -24,5 +24,6 @@ Major uses of jemalloc include:
 # Additional documentation
 The following documentation is dated or otherwise unsuited to wiki form:
 * <a href="http://jemalloc.net/jemalloc.3.html">jemalloc(3) manual page</a>: The manual page for the latest release fully describes the API and options supported by jemalloc, and includes a brief summary of its internals.
+* <a href="http://applicative.acm.org/2015/applicative.acm.org/speaker-JasonEvans.html">Applicative 2015 presentation</a>: This talk (<a href="https://youtu.be/RcWp5vwGlYU?list=PLn0nrSd4xjjZoaFwsTnmS1UFj3ob7gf7s">video</a>) presented the background and initial design ideas that lead to decay-based unused dirty page purging, first available in the <a href="https://github.com/jemalloc/jemalloc/releases/tag/4.1.0">4.1.0</a> release.
 * <a href="http://www.facebook.com/notes/facebook-engineering/scalable-memory-allocation-using-jemalloc/480222803919">Facebook Engineering post</a>: This article was written in 2011 and corresponds to jemalloc 2.1.0.
 * <a href="http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf">BSDcan paper</a>: This paper was presented at the <a href="http://www.bsdcan.org/">BSDcan conference</a> in 2006 and roughly corresponds to the version of jemalloc that appeared in <a href="http://www.freebsd.org/">FreeBSD</a> 7.
