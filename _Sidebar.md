@@ -11,6 +11,7 @@
   - [[Introspection via mallctl*()|Use-Case:-Introspection-Via-mallctl*()]]
   - [[Leak Checking|Use-Case:-Leak-Checking]]
   - [[Heap Profiling|Use-Case:-Heap-Profiling]]
+  - [[Tuning|https://github.com/jemalloc/jemalloc/blob/dev/TUNING.md]]
 * Development
   - [[Coding style|Coding-Style]]
   - [[Testing|Testing]]
